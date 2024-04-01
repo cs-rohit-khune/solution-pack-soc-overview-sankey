@@ -1,0 +1,240 @@
+{
+    "@type": "Workflow",
+    "triggerLimit": null,
+    "name": "Scenario - Sankey Visualizer",
+    "aliasName": null,
+    "tag": null,
+    "description": "Create sample data to demonstrate how the 'SOC Overview Sankey' widget is used.",
+    "isActive": true,
+    "debug": false,
+    "singleRecordExecution": false,
+    "remoteExecutableFlag": false,
+    "parameters": [],
+    "synchronous": false,
+    "collection": "\/api\/3\/workflow_collections\/c49f4fa7-f775-46f8-934c-d5ab8d2c1aa4",
+    "versions": [],
+    "triggerStep": "\/api\/3\/workflow_steps\/27563026-9b27-4f86-b8cf-9f7b1128851e",
+    "steps": [
+        {
+            "@type": "WorkflowStep",
+            "name": "Configuration",
+            "description": null,
+            "arguments": {
+                "record_iri_list": "[]",
+                "faz_alerts_metadata": "[\n    {\n        \"name\": \"Intrusion to 172.16.92.203 blocked\",\n        \"type\": \"\/api\/3\/picklists\/0cbc2c31-c360-4770-b1e7-3653a8c24ead\",\n        \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n        \"source\": \"FortiAnalyzer\",\n        \"sourceId\": \"12346\",\n        \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n        \"severity\": \"\/api\/3\/picklists\/7efa2220-39bb-44e4-961f-ac368776e3b0\",\n        \"description\": \"<table style=\\\"width: 400px; border-collapse: unset;\\\" border=\\\"2\\\"><tbody><tr><td style=\\\"width: 152px;\\\"><strong>Event Type<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;ips<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device Name<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FGVM010000066100<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device Type<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FortiGate<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device ID<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FGVM010000066100<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Tag<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;Default,By_Threat,Intrusion,Signature,Victim<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Subject<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;Intrusion to 172.16.92.203 blocked<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Extra Information<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;Intrusion: Apache.Struts.2.Jakarta.Multipart.Parser.Code.Execution with severity:critical, Reference: http:\/\/www.fortinet.com\/ids\/VID43745, Traffic path: PolicyID 386\\\\\\\\\\\\\\\\172.30.142.8:48142<\/td><\/tr><\/tbody><\/table><p>&nbsp;<\/p>\"\n    },\n    {\n        \"name\": \"Internal intrusion HTPasswd.Access blocked\",\n        \"type\": \"\/api\/3\/picklists\/0cbc2c31-c360-4770-b1e7-3653a8c24ead\",\n        \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n        \"source\": \"FortiAnalyzer\",\n        \"sourceId\": \"12345\",\n        \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n        \"severity\": \"\/api\/3\/picklists\/b3c20a3a-ecfd-4adc-a225-0205968e6793\",\n        \"description\": \"<table style=\\\"width: 400px; border-collapse: unset;\\\" border=\\\"2\\\"><tbody><tr><td style=\\\"width: 152px;\\\"><strong>Event Type<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;ips<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device Name<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FGVM010000066100<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device Type<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FortiGate<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device ID<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FGVM010000066100<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Tag<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;Default,By_Endpoint,Intrusion,Signature,Internal<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Subject<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;Internal intrusion HTPasswd.Access blocked<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Extra Information<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;outgoing internal intrusion, Source: gw_Sunn_Off (undefined)\\\\\\\\\\\\\\\\172.30.142.8, Destination: 92_AV\\\\\\\\\\\\\\\\172.16.92.102<\/td><\/tr><\/tbody><\/table><p>&nbsp;<\/p>\"\n    },\n    {\n        \"name\": \"Intrusion to 172.16.92.102 blocked\",\n        \"type\": \"\/api\/3\/picklists\/0cbc2c31-c360-4770-b1e7-3653a8c24ead\",\n        \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n        \"source\": \"FortiAnalyzer\",\n        \"sourceId\": \"12348\",\n        \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n        \"severity\": \"\/api\/3\/picklists\/b3c20a3a-ecfd-4adc-a225-0205968e6793\",\n        \"description\": \"<table style=\\\"width: 400px; border-collapse: unset;\\\" border=\\\"2\\\"><tbody><tr><td style=\\\"width: 152px;\\\"><strong>Event Type<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;ips<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device Name<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FGVM010000066100<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device Type<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FortiGate<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device ID<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FGVM010000066100<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Tag<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;Default,By_Threat,Intrusion,Signature,Victim<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Subject<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;Intrusion to 172.16.92.102 blocked<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Extra Information<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;Intrusion: HTPasswd.Access with severity:medium, Reference: http:\/\/www.fortinet.com\/ids\/VID12648, Traffic path: PolicyID 386\\\\\\\\\\\\\\\\172.30.142.8:57452<\/td><\/tr><\/tbody><\/table><p>&nbsp;<\/p>\"\n    },\n    {\n        \"name\": \"Internal intrusion Web.Server.Password.Files.Access blocked\",\n        \"type\": \"\/api\/3\/picklists\/0cbc2c31-c360-4770-b1e7-3653a8c24ead\",\n        \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n        \"source\": \"FortiAnalyzer\",\n        \"sourceId\": \"1245\",\n        \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n        \"severity\": \"\/api\/3\/picklists\/58d0753f-f7e4-403b-953c-b0f521eab759\",\n        \"description\": \"<table style=\\\"width: 400px; border-collapse: unset;\\\" border=\\\"2\\\"><tbody><tr><td style=\\\"width: 152px;\\\"><strong>Event Type<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;ips<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device Name<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FGVM010000066101<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device Type<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FortiGate<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device ID<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FGVM010000066101<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Tag<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;Default,By_Endpoint,Intrusion,Signature,Internal<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Subject<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;Internal intrusion Web.Server.Password.Files.Access blocked<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Extra Information<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;outgoing internal intrusion, Source: gw_Sunn_Off (undefined)\\\\\\\\\\\\\\\\172.30.142.8, Destination: 92_AV\\\\\\\\\\\\\\\\172.16.92.188<\/td><\/tr><\/tbody><\/table><p>&nbsp;<\/p>\"\n    },\n    {\n        \"name\": \"Internal intrusion PHP.CGI.Argument.Injection blocked\",\n        \"type\": \"\/api\/3\/picklists\/0cbc2c31-c360-4770-b1e7-3653a8c24ead\",\n        \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n        \"source\": \"FortiAnalyzer\",\n        \"sourceId\": \"125\",\n        \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n        \"severity\": \"\/api\/3\/picklists\/40187287-89fc-4e9c-b717-e9443d57eedb\",\n        \"description\": \"<table style=\\\"width: 400px; border-collapse: unset;\\\" border=\\\"2\\\"><tbody><tr><td style=\\\"width: 152px;\\\"><strong>Event Type<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;ips<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device Name<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FGVM010000066102<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device Type<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FortiGate<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Device ID<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;FGVM010000066102<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Tag<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;Default,By_Endpoint,Intrusion,Signature,Internal<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Subject<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;Internal intrusion PHP.CGI.Argument.Injection blocked<\/td><\/tr><tr><td style=\\\"width: 152px;\\\"><strong>Extra Information<\/strong><\/td><td style=\\\"width: 326px;\\\">&nbsp;outgoing internal intrusion, Source: gw_Sunn_Off (undefined)\\\\\\\\\\\\\\\\172.30.142.8, Destination: 92_AV\\\\\\\\\\\\\\\\172.16.92.203<\/td><\/tr><\/tbody><\/table><p>&nbsp;<\/p>\"\n    }\n]",
+                "fndr_alerts_metadata": "[\n    {\n      \"name\": \"10.10.31.55 : Trickbot Data Exfiltration\",\n      \"type\": \"\/api\/3\/picklists\/574a6ee2-7265-4701-815e-cff83b053bce\",\n      \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n      \"source\": \"FortiNDR\",\n      \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n      \"severity\": \"\/api\/3\/picklists\/58d0753f-f7e4-403b-953c-b0f521eab759\",\n      \"sourceId\": \"cac482fc-533f-40d4-8557-c885b1fbc18c\",\n      \"description\": \"This logic is intended to detect data exfiltration by the Trickbot banking trojan. Trickbot attempts to harvest credentials for web sites, primarily for financial institutions. Trickbot typically exfiltrates data to its C2 servers using a self-signed certificate and communicates over non-standard ports such as 447 or 449.\\\\n\\\\nGigamon ATR considers this detection to be high severity, as it is indicative of successful malicious code execution and potential compromise of user credentials. Gigamon ATR considers this detection to be moderate confidence because, while it has not been seen to have false positives, certificate subjects are easy to change and impersonate.\\\\n\\\\n### Next Steps\\\\n1. Determine if this is a true positive by:\\\\n   1. Checking the server name indication as most malicious traffic will be directly to a compromised IP address, rather than a domain.\\\\n   2. Checking the impacted asset for other indicators of compromise.\\\\n2. Quarantine the impacted device.\\\\n3. Begin incident response procedures on the impacted device.\\\\n4. Block traffic to attacker infrastructure.\\\\n5. Search for other impacted devices.\\\\n\\\\n\\\\n<table border=\\\\\\\\\\\"1\\\\\\\\\\\"><thead><tr><th width=\\\\\\\\\\\"250\\\\\\\\\\\"> Fields<\/th><th width=\\\\\\\\\\\"250\\\\\\\\\\\"> Values<\/th><\/tr><\/thead>\\\\n<tbody>\\\\n<tr><td>Confidence<\/td>\\\\n<td>moderate<\/td><\/tr>\\\\n<td>Category<\/td>\\\\n<td>Attack:Exfiltration<\/td><\/tr>\\\\n<td>Specificity<\/td>\\\\n<td>tool_implementation<\/td><\/tr>\\\\n<\/tbody>\\\\n<\/table>\"\n    },\n    {\n      \"name\": \"10.10.31.5 : Trickbot Data Exfiltration\",\n      \"type\": \"\/api\/3\/picklists\/574a6ee2-7265-4701-815e-cff83b053bce\",\n      \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n      \"source\": \"FortiNDR\",\n      \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n      \"severity\": \"\/api\/3\/picklists\/b3c20a3a-ecfd-4adc-a225-0205968e6793\",\n      \"sourceId\": \"cac482fc-533f-40d4-8557-c885b1fbc18d\",\n      \"description\": \"This logic is intended to detect data exfiltration by the Trickbot banking trojan. Trickbot attempts to harvest credentials for web sites, primarily for financial institutions. Trickbot typically exfiltrates data to its C2 servers using a self-signed certificate and communicates over non-standard ports such as 447 or 449.\\\\n\\\\nGigamon ATR considers this detection to be high severity, as it is indicative of successful malicious code execution and potential compromise of user credentials. Gigamon ATR considers this detection to be moderate confidence because, while it has not been seen to have false positives, certificate subjects are easy to change and impersonate.\\\\n\\\\n### Next Steps\\\\n1. Determine if this is a true positive by:\\\\n   1. Checking the server name indication as most malicious traffic will be directly to a compromised IP address, rather than a domain.\\\\n   2. Checking the impacted asset for other indicators of compromise.\\\\n2. Quarantine the impacted device.\\\\n3. Begin incident response procedures on the impacted device.\\\\n4. Block traffic to attacker infrastructure.\\\\n5. Search for other impacted devices.\\\\n\\\\n\\\\n<table border=\\\\\\\\\\\"1\\\\\\\\\\\"><thead><tr><th width=\\\\\\\\\\\"250\\\\\\\\\\\"> Fields<\/th><th width=\\\\\\\\\\\"250\\\\\\\\\\\"> Values<\/th><\/tr><\/thead>\\\\n<tbody>\\\\n<tr><td>Confidence<\/td>\\\\n<td>moderate<\/td><\/tr>\\\\n<td>Category<\/td>\\\\n<td>Attack:Exfiltration<\/td><\/tr>\\\\n<td>Specificity<\/td>\\\\n<td>tool_implementation<\/td><\/tr>\\\\n<\/tbody>\\\\n<\/table>\"\n    },\n    {\n      \"name\": \"10.130.31.5 : Trickbot Data Exfiltration\",\n      \"type\": \"\/api\/3\/picklists\/574a6ee2-7265-4701-815e-cff83b053bce\",\n      \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n      \"source\": \"FortiNDR\",\n      \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n      \"severity\": \"\/api\/3\/picklists\/58d0753f-f7e4-403b-953c-b0f521eab759\",\n      \"sourceId\": \"cac482fc-533f-40d4-8557-c885b1fbc18m\",\n      \"description\": \"This logic is intended to detect data exfiltration by the Trickbot banking trojan. Trickbot attempts to harvest credentials for web sites, primarily for financial institutions. Trickbot typically exfiltrates data to its C2 servers using a self-signed certificate and communicates over non-standard ports such as 447 or 449.\\\\n\\\\nGigamon ATR considers this detection to be high severity, as it is indicative of successful malicious code execution and potential compromise of user credentials. Gigamon ATR considers this detection to be moderate confidence because, while it has not been seen to have false positives, certificate subjects are easy to change and impersonate.\\\\n\\\\n### Next Steps\\\\n1. Determine if this is a true positive by:\\\\n   1. Checking the server name indication as most malicious traffic will be directly to a compromised IP address, rather than a domain.\\\\n   2. Checking the impacted asset for other indicators of compromise.\\\\n2. Quarantine the impacted device.\\\\n3. Begin incident response procedures on the impacted device.\\\\n4. Block traffic to attacker infrastructure.\\\\n5. Search for other impacted devices.\\\\n\\\\n\\\\n<table border=\\\\\\\\\\\"1\\\\\\\\\\\"><thead><tr><th width=\\\\\\\\\\\"250\\\\\\\\\\\"> Fields<\/th><th width=\\\\\\\\\\\"250\\\\\\\\\\\"> Values<\/th><\/tr><\/thead>\\\\n<tbody>\\\\n<tr><td>Confidence<\/td>\\\\n<td>moderate<\/td><\/tr>\\\\n<td>Category<\/td>\\\\n<td>Attack:Exfiltration<\/td><\/tr>\\\\n<td>Specificity<\/td>\\\\n<td>tool_implementation<\/td><\/tr>\\\\n<\/tbody>\\\\n<\/table>\"\n    }\n  ]",
+                "fmngr_alerts_metadata": "[\n    {\n        \"name\": \"root-IN00000002\",\n        \"type\": \"\/api\/3\/picklists\/574a6ee2-7265-4701-815e-cff83b053bce\",\n        \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n        \"source\": \"FortiManager\",\n        \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n        \"severity\": \"\/api\/3\/picklists\/40187287-89fc-4e9c-b717-e9443d57eedb\",\n        \"sourceId\": \"root-IN00000002\",\n        \"description\": \"\"\n    },\n    {\n        \"name\": \"root-IN00000003\",\n        \"type\": \"\/api\/3\/picklists\/574a6ee2-7265-4701-815e-cff83b053bce\",\n        \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n        \"source\": \"FortiManager\",\n        \"status\": \"\/api\/3\/picklists\/758925e7-629c-46d8-89db-fb36f5fbe88a\",\n        \"severity\": \"\/api\/3\/picklists\/40187287-89fc-4e9c-b717-e9443d57eedb\",\n        \"sourceId\": \"root-IN00000003\",\n        \"description\": \"\"\n    },\n    {\n        \"name\": \"root-IN00000004\",\n        \"type\": \"\/api\/3\/picklists\/574a6ee2-7265-4701-815e-cff83b053bce\",\n        \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n        \"source\": \"FortiManager\",\n        \"status\": \"\/api\/3\/picklists\/758925e7-629c-46d8-89db-fb36f5fbe88a\",\n        \"severity\": \"\/api\/3\/picklists\/58d0753f-f7e4-403b-953c-b0f521eab759\",\n        \"sourceId\": \"root-IN00000004\",\n        \"description\": \"\"\n    },\n    {\n        \"name\": \"root-IN00000001\",\n        \"type\": \"\/api\/3\/picklists\/574a6ee2-7265-4701-815e-cff83b053bce\",\n        \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n        \"source\": \"FortiManager\",\n        \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n        \"severity\": \"\/api\/3\/picklists\/b3c20a3a-ecfd-4adc-a225-0205968e6793\",\n        \"sourceId\": \"root-IN00000001\",\n        \"description\": \"\"\n    }\n]",
+                "fsiem_alerts_metadata": "[\n    {\n      \"name\": \"18 login failures for user root from 221.229.172.66 on network device FG240D3913800441\",\n      \"type\": \"\/api\/3\/picklists\/574a6ee2-7265-4701-815e-cff83b053bce\",\n      \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n      \"source\": \"FortiSIEM\",\n      \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n      \"severity\": \"\/api\/3\/picklists\/40187287-89fc-4e9c-b717-e9443d57eedb\",\n      \"sourceId\": \"98277\",\n      \"description\": \"<div class=\\\"font-size-16 ng-binding padding-bottom-sm\\\"><h4 style=\\\"background: #404142;padding: 5px;text-align: left;color: orange;background: black;\\\">Multiple Login Failures: Net Device-PH_RULE_EXCESS_FAILED_LOGON_2_NET_DEV<\/h4><\/div>\\n<table style=\\\"border-color: #04080c;\\\" border=\\\"1\\\" class=\\\"font-normal\\\">\\n<tbody><tr><td>\\n\\n\\n \\n<div class=\\\"font-size-14 ng-binding\\\">Incident Source<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">221.229.172.66<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Target<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">192.168.3.1<\/div>\\n<\/div>\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Reporting IP<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">192.168.3.1<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Reporting Device<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">221.229.172.66<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">First Occurred<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">2024-03-01 00:02:00 +00:00<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Last Occurred<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">2024-03-11 15:34:30 +00:00<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Category<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">Security<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Sub-Category<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">Credential Access<\/div>\\n<\/div>\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Attack Technique<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">[{'name': 'Brute Force: Password Guessing', 'techniqueid': 'T1110.001'}]<\/div>\\n<\/div>\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Details<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">incidentCount:18  <\/div>\\n<\/div>\\n\\n\\n<table style=\\\"color:white;font-size:11;\\\">\\n<tbody><tr><\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr>\\n<\/tbody><\/table><\/td><\/tr><\/tbody><\/table>\"\n    },\n    {\n      \"name\": \"Joe.Burns modified DEVWIN-Joe10$ account on THREATSOCDC domain EXAMPLE\",\n      \"type\": \"\/api\/3\/picklists\/574a6ee2-7265-4701-815e-cff83b053bce\",\n      \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n      \"source\": \"FortiSIEM\",\n      \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n      \"severity\": \"\/api\/3\/picklists\/b3c20a3a-ecfd-4adc-a225-0205968e6793\",\n      \"sourceId\": \"265\",\n      \"description\": \"<div class=\\\"font-size-16 ng-binding padding-bottom-sm\\\"><h4 style=\\\"background: #404142;padding: 5px;text-align: left;color: orange;background: black;\\\">Domain Controller User or Group Modification-PH_RULE_CHANGE_DC_USER_GRP<\/h4><\/div>\\n<table style=\\\"border-color: #04080c;\\\" border=\\\"1\\\" class=\\\"font-normal\\\">\\n<tbody><tr><td>\\n\\n\\n\\n\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Reporting IP<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">10.1.1.33<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Reporting Device<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">THREATSOCDC<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">First Occurred<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">2024-03-01 00:02:30 +00:00<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Last Occurred<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">2024-03-11 15:33:00 +00:00<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Category<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">Change<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Sub-Category<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">Persistence<\/div>\\n<\/div>\\n\\n\\n\\n\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Analysts Comments<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">comentarios<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Attack Technique<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">[{'name': 'Account Manipulation: Additional Cloud Credentials', 'techniqueid': 'T1098.001'}]<\/div>\\n<\/div>\\n\\n\\n\\n\\n<table style=\\\"color:white;font-size:11;\\\">\\n<tbody><tr><\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr>\\n<\/tbody><\/table><\/td><\/tr><\/tbody><\/table>\"\n    },\n    {\n      \"name\": \"High log receiving delay from monitored device 192.168.134.55\",\n      \"type\": \"\/api\/3\/picklists\/574a6ee2-7265-4701-815e-cff83b053bce\",\n      \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n      \"source\": \"FortiSIEM\",\n      \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n      \"severity\": \"\/api\/3\/picklists\/b3c20a3a-ecfd-4adc-a225-0205968e6793\",\n      \"sourceId\": \"117485\",\n      \"description\": \"<div class=\\\"font-size-16 ng-binding padding-bottom-sm\\\"><h4 style=\\\"background: #404142;padding: 5px;text-align: left;color: orange;background: black;\\\">No logs from a device-PH_RULE_NO_LOGS_FROM_DEVICE<\/h4><\/div>\\n<table style=\\\"border-color: #04080c;\\\" border=\\\"1\\\" class=\\\"font-normal\\\">\\n<tbody><tr><td>\\n\\n\\n\\n\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Reporting IP<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">10.7.12.236<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Reporting Device<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">enterprise-collector<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">First Occurred<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">2024-03-12 05:13:30 +00:00<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Last Occurred<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">2024-03-12 05:13:30 +00:00<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Category<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">Availability<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Sub-Category<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">FortiSIEM<\/div>\\n<\/div>\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Details<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">jobName:Syslog  <\/div>\\n<\/div>\\n\\n\\n<table style=\\\"color:white;font-size:11;\\\">\\n<tbody><tr><\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr>\\n<\/tbody><\/table><\/td><\/tr><\/tbody><\/table>\"\n    },\n    {\n      \"name\": \"6 domain logon failures for user Administrator domain $domain from 192.168.64.195 on server WIN2019-ADS.example.com\",\n      \"type\": \"\/api\/3\/picklists\/574a6ee2-7265-4701-815e-cff83b053bce\",\n      \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n      \"source\": \"FortiSIEM\",\n      \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n      \"severity\": \"\/api\/3\/picklists\/58d0753f-f7e4-403b-953c-b0f521eab759\",\n      \"sourceId\": \"20233\",\n      \"description\": \"<div class=\\\"font-size-16 ng-binding padding-bottom-sm\\\"><h4 style=\\\"background: #404142;padding: 5px;text-align: left;color: orange;background: black;\\\">Multiple Logon Failures: Domain-PH_RULE_EXCESS_FAILED_LOGON_DOMAIN<\/h4><\/div>\\n<table style=\\\"border-color: #04080c;\\\" border=\\\"1\\\" class=\\\"font-normal\\\">\\n<tbody><tr><td>\\n\\n\\n \\n<div class=\\\"font-size-14 ng-binding\\\">Incident Source<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">192.168.64.195<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Target<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">192.168.0.10<\/div>\\n<\/div>\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Reporting IP<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">192.168.0.10<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Reporting Device<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">192.168.64.195<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">First Occurred<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">2024-03-01 00:31:30 +00:00<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Last Occurred<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">2024-03-11 15:31:30 +00:00<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Category<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">Security<\/div>\\n<\/div>\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Sub-Category<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">Credential Access<\/div>\\n<\/div>\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Attack Technique<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">[{'name': 'Brute Force: Password Guessing', 'techniqueid': 'T1110.001'}]<\/div>\\n<\/div>\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Details<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">incidentCount:6  <\/div>\\n<\/div>\\n\\n\\n<table style=\\\"color:white;font-size:11;\\\">\\n<tbody><tr><\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr>\\n<\/tbody><\/table><\/td><\/tr><\/tbody><\/table>\"\n    },\n    {\n      \"name\": \"Outbound connection from 192.168.60.132 to 103.224.212.222 on port 31337\",\n      \"type\": \"\/api\/3\/picklists\/844c0b64-04fa-494f-9795-7c8406e59f69\",\n      \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n      \"source\": \"FortiSIEM\",\n      \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n      \"severity\": \"\/api\/3\/picklists\/7efa2220-39bb-44e4-961f-ac368776e3b0\",\n      \"sourceId\": \"1679\",\n      \"description\": \"<table>\\n<tr>\\n<td colspan=\\\"10\\\" style=\\\"border:0px;padding-left: 0px;padding-right: 0px;\\\">\\n<h4 style=\\\"color: orange;\\\" class=\\\"body-default-bgcolor margin-bottom-0 margin-top-0 padding-bottom-md padding-left-md padding-top-md text-align-left\\\">Outbound connection using a common C2 port is detected-PH_RULE_MALICIOUS_OUTBOUND_CONNECTION<\/h4>\\n<\/td>\\n<\/tr>\\n<tr>\\n\\n<th>Incident Source<\/th>\\n\\n\\n<th>Incident Target<\/th>\\n\\n\\n<th>Incident Reporting IP<\/th>\\n\\n\\n<th>Reporting Device<\/th>\\n\\n\\n<th>First Occurred<\/th>\\n\\n\\n<th>Last Occurred<\/th>\\n\\n\\n<th>Incident Category<\/th>\\n\\n\\n<th>Incident Sub-Category<\/th>\\n\\n\\n\\n\\n\\n<th>Attack Technique<\/th>\\n\\n\\n<th>Incident Details<\/th>\\n\\n<\/tr>\\n<tr>\\n\\n<td>192.168.60.132<\/td>\\n\\n\\n<td>103.224.212.222<\/td>\\n\\n\\n<td>192.168.60.132<\/td>\\n\\n\\n<td>192.168.60.132<\/td>\\n\\n\\n<td>2023-12-08 09:02:30 +00:00<\/td>\\n\\n\\n<td>2023-12-08 09:27:30 +00:00<\/td>\\n\\n\\n<td>Security<\/td>\\n\\n\\n<td>Command and Control<\/td>\\n\\n\\n\\n\\n\\n<td>T1043 - Commonly Used Port<\/div>\\n\\n\\n<td>ipProto:6  <\/td>\\n\\n<\/tr>\\n<\/table>\"\n    },\n    {\n      \"name\": \"Large Outbound Transfer To Outside My Country\",\n      \"type\": \"\/api\/3\/picklists\/a043fb35-f373-44c0-bfa9-5bce2f711141\",\n      \"state\": \"\/api\/3\/picklists\/501d0562-89a0-4079-9a9e-cdde7d34e3ed\",\n      \"source\": \"FortiSIEM\",\n      \"status\": \"\/api\/3\/picklists\/7de816ff-7140-4ee5-bd05-93ce22002146\",\n      \"severity\": \"\/api\/3\/picklists\/7efa2220-39bb-44e4-961f-ac368776e3b0\",\n      \"sourceId\": \"87897\",\n      \"description\": \"<div class=\\\"font-size-16 ng-binding padding-bottom-sm\\\"><h4 style=\\\"background: #404142;padding: 5px;text-align: left;color: orange;background: black;\\\">Large outbound transfer from 10.200.3.227 to outside my country 151.101.3.5<\/h4><\/div>\\n<table style=\\\"border-color: #04080c;\\\" border=\\\"1\\\" class=\\\"font-normal\\\">\\n<tbody><tr><td>\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Source IP<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">10.200.3.227<\/div>\\n<\/div>\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Destination IP<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">151.101.3.5<\/div>\\n<\/div>\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Reporting Device<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">FortiGate-Core<\/div>\\n<\/div>\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Impacts<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">Network<\/div>\\n<\/div>\\n\\n\\n\\n<div class=\\\"font-size-14 ng-binding\\\">Incident Details<\/div><div class=\\\"card-container-body\\\" style=\\\"width: 100%;font-size:46px;\\\">\\n<div class=\\\"card-number\\\" style=\\\"font-size:20px;  border-left: 5px solid red;background:#141b23\\\">sentBytes64:2450636 <\/div>\\n<\/div>\\n\\n<table style=\\\"color:white;font-size:11;\\\">\\n<tbody><tr><\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr><tr>\\n\\n\\n<\/tr>\\n<\/tbody><\/table><\/td><\/tr><\/tbody><\/table>\"\n    }\n  ]"
+            },
+            "status": null,
+            "top": "165",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "group": null,
+            "uuid": "69a81fa2-95ff-4c46-a55f-fcdc11a0db83"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Create FAZ Records",
+            "description": null,
+            "arguments": {
+                "arguments": {
+                    "alertMetadata": "{{vars.faz_alerts_metadata}}",
+                    "incidentSeverity": "Critical"
+                },
+                "apply_async": false,
+                "step_variables": {
+                    "_temp": "{{vars.record_iri_list.extend(vars.steps.Create_FAZ_Records.recordIRIList)}}"
+                },
+                "pass_parent_env": false,
+                "pass_input_record": false,
+                "workflowReference": "\/api\/3\/workflows\/62b89160-8fa8-471b-bdc2-79cb7bf9ba1b"
+            },
+            "status": null,
+            "top": "300",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+            "group": null,
+            "uuid": "c57f8688-ae69-47b6-9ce8-34d0ad504082"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Create FortiManager Records",
+            "description": null,
+            "arguments": {
+                "arguments": {
+                    "alertMetadata": "{{vars.fmngr_alerts_metadata}}",
+                    "incidentSeverity": "Medium"
+                },
+                "apply_async": false,
+                "step_variables": {
+                    "_temp": "{{vars.record_iri_list.extend(vars.steps.Create_FortiManager_Records.recordIRIList)}}"
+                },
+                "pass_parent_env": false,
+                "pass_input_record": false,
+                "workflowReference": "\/api\/3\/workflows\/62b89160-8fa8-471b-bdc2-79cb7bf9ba1b"
+            },
+            "status": null,
+            "top": "705",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+            "group": null,
+            "uuid": "6b9dcf8f-5e92-4047-a9a9-c8a6de4af80d"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Create FortiNDR Records",
+            "description": null,
+            "arguments": {
+                "arguments": {
+                    "alertMetadata": "{{vars.fndr_alerts_metadata}}",
+                    "incidentSeverity": "Medium"
+                },
+                "apply_async": false,
+                "step_variables": {
+                    "_temp": "{{vars.record_iri_list.extend(vars.steps.Create_FortiNDR_Records.recordIRIList)}}"
+                },
+                "pass_parent_env": false,
+                "pass_input_record": false,
+                "workflowReference": "\/api\/3\/workflows\/62b89160-8fa8-471b-bdc2-79cb7bf9ba1b"
+            },
+            "status": null,
+            "top": "435",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+            "group": null,
+            "uuid": "615b127c-b0a9-41a8-9ccb-833bdc8fc667"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Create FortiSIEM Records",
+            "description": null,
+            "arguments": {
+                "arguments": {
+                    "alertMetadata": "{{vars.fsiem_alerts_metadata}}",
+                    "incidentSeverity": "High"
+                },
+                "apply_async": false,
+                "step_variables": {
+                    "_temp": "{{vars.record_iri_list.extend(vars.steps.Create_FortiSIEM_Records.recordIRIList)}}"
+                },
+                "pass_parent_env": false,
+                "pass_input_record": false,
+                "workflowReference": "\/api\/3\/workflows\/62b89160-8fa8-471b-bdc2-79cb7bf9ba1b"
+            },
+            "status": null,
+            "top": "570",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+            "group": null,
+            "uuid": "ba96e036-0c81-484e-82eb-177a768ac1af"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Set Output",
+            "description": null,
+            "arguments": {
+                "@id": "{{vars.record_iri_list}}"
+            },
+            "status": null,
+            "top": "840",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "group": null,
+            "uuid": "3655232b-e63e-4f59-ba1e-eac96bf544f1"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Start",
+            "description": null,
+            "arguments": {
+                "__triggerLimit": true,
+                "step_variables": {
+                    "input": {
+                        "params": []
+                    }
+                },
+                "triggerOnSource": true,
+                "triggerOnReplicate": false
+            },
+            "status": null,
+            "top": "30",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+            "group": null,
+            "uuid": "27563026-9b27-4f86-b8cf-9f7b1128851e"
+        }
+    ],
+    "routes": [
+        {
+            "@type": "WorkflowRoute",
+            "name": "Configuration -> Create Demo Records",
+            "targetStep": "\/api\/3\/workflow_steps\/c57f8688-ae69-47b6-9ce8-34d0ad504082",
+            "sourceStep": "\/api\/3\/workflow_steps\/69a81fa2-95ff-4c46-a55f-fcdc11a0db83",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "20a80ef1-bbb1-481b-b18d-61bb77de69bf"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Create FAZ Records -> Create FortiSIEM Records",
+            "targetStep": "\/api\/3\/workflow_steps\/615b127c-b0a9-41a8-9ccb-833bdc8fc667",
+            "sourceStep": "\/api\/3\/workflow_steps\/c57f8688-ae69-47b6-9ce8-34d0ad504082",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "4c172925-e6eb-4482-a91f-22b49524fbc7"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Create FortiManager Records -> Set Output",
+            "targetStep": "\/api\/3\/workflow_steps\/3655232b-e63e-4f59-ba1e-eac96bf544f1",
+            "sourceStep": "\/api\/3\/workflow_steps\/6b9dcf8f-5e92-4047-a9a9-c8a6de4af80d",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "86aae0c8-34c2-4b8d-b7a9-e988fd2b610d"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Create FortiNDR Records -> Create FortiSIEM Records",
+            "targetStep": "\/api\/3\/workflow_steps\/ba96e036-0c81-484e-82eb-177a768ac1af",
+            "sourceStep": "\/api\/3\/workflow_steps\/615b127c-b0a9-41a8-9ccb-833bdc8fc667",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "b7e1311e-684f-417f-8a03-637daa0d8e42"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Create FortiSIEM Records -> Copy 1 of Create FortiNDR Records",
+            "targetStep": "\/api\/3\/workflow_steps\/6b9dcf8f-5e92-4047-a9a9-c8a6de4af80d",
+            "sourceStep": "\/api\/3\/workflow_steps\/ba96e036-0c81-484e-82eb-177a768ac1af",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "81f07c91-bfe9-4790-9d10-15b9477063cc"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Start -> Configuration",
+            "targetStep": "\/api\/3\/workflow_steps\/69a81fa2-95ff-4c46-a55f-fcdc11a0db83",
+            "sourceStep": "\/api\/3\/workflow_steps\/27563026-9b27-4f86-b8cf-9f7b1128851e",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "df808a31-ee97-46a0-a6fc-befd725dbd52"
+        }
+    ],
+    "groups": [],
+    "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "uuid": "e7bd32ac-9d31-4ab8-bc41-b85b3e14feca",
+    "owners": [],
+    "isPrivate": false,
+    "deletedAt": null,
+    "recordTags": [
+        "Referenced",
+        "Scenario"
+    ]
+}

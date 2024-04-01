@@ -1,0 +1,58 @@
+{
+    "name": "sOCOverviewSankey",
+    "version": "1.0.0",
+    "fsrMinCompatibility": "7.4.2",
+    "type": "solutionpack",
+    "local": true,
+    "label": "Sankey Visualizer",
+    "dependencies": [
+        {
+            "name": "sOARFramework",
+            "type": "solutionpack",
+            "label": "SOAR Framework",
+            "minVersion": null
+        },
+        {
+            "name": "socSimulator",
+            "type": "solutionpack",
+            "label": "SOC Simulator",
+            "minVersion": null
+        }
+    ],
+    "prerequisite": "",
+    "publisher": "Fortinet",
+    "description": "The solution pack demonstrates how to utilize the 'SOC Overview Sankey' widget to visualize the flow of data across different modules, including alerts and escalated incidents from various sources.",
+    "help": "https://github.com/fortinet-fortisoar/solution-pack-soc-overview-sankey/blob/release/1.0.0/README.md",
+    "category": [
+        "Security Posture Management"
+    ],
+    "supportInfo": null,
+    "iconLarge": null,
+    "postInstallConfig": null,
+    "date": "2024-03-28T15:33:24+00:00",
+    "contents": {
+        "playbooks": [
+            {
+                "name": "02 - Use Case - Sankey Visualizer"
+            }
+        ],
+        "dashboards": [
+            {
+                "name": "SOC Alert Flow (Sankey)"
+            }
+        ],
+        "widgets": [
+            {
+                "apiName": "socOverviewSankey",
+                "name": "SOC Overview Sankey"
+            }
+        ],
+        "recordSets": [
+            {
+                "name": "Scenario",
+                "apiName": "scenario",
+                "count": 1
+            }
+        ]
+    }
+}

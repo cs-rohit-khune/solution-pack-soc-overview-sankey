@@ -1,0 +1,202 @@
+{
+    "@type": "Workflow",
+    "triggerLimit": null,
+    "name": "Scenario - Sankey Visualizer - Create Demo Records",
+    "aliasName": null,
+    "tag": null,
+    "description": "Generate sample alert and incident records for demonstration purposes",
+    "isActive": true,
+    "debug": false,
+    "singleRecordExecution": false,
+    "remoteExecutableFlag": false,
+    "parameters": [
+        "alertMetadata",
+        "incidentSeverity"
+    ],
+    "synchronous": false,
+    "collection": "\/api\/3\/workflow_collections\/c49f4fa7-f775-46f8-934c-d5ab8d2c1aa4",
+    "versions": [],
+    "triggerStep": "\/api\/3\/workflow_steps\/b9cfab0b-33a6-425c-8c00-a4ace3108358",
+    "steps": [
+        {
+            "@type": "WorkflowStep",
+            "name": "Configuration",
+            "description": null,
+            "arguments": {
+                "recordIRIs": "[]"
+            },
+            "status": null,
+            "top": "165",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "group": null,
+            "uuid": "006d5cec-ece1-4c1a-be25-17aedcb0ce9b"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Create Alerts",
+            "description": null,
+            "arguments": {
+                "for_each": {
+                    "item": "{{vars.input.params.alertMetadata}}",
+                    "__bulk": true,
+                    "parallel": false,
+                    "condition": "",
+                    "batch_size": 100
+                },
+                "resource": {
+                    "name": "{{vars.item.name}}",
+                    "type": "{{vars.item.type}}",
+                    "state": "{{vars.item.state}}",
+                    "source": "{{vars.item.source}}",
+                    "status": "\/api\/3\/picklists\/fac53e73-8d16-4189-98d5-95fbd1555232",
+                    "severity": "{{vars.item.severity}}",
+                    "sourceId": "{{vars.item.sourceId}}",
+                    "__replace": "true",
+                    "description": "{{vars.item.description}}",
+                    "ackSlaStatus": "\/api\/3\/picklists\/72979f64-e8b9-4888-a965-957e0ec24818",
+                    "closureNotes": "Escalated as Incident",
+                    "respSlaStatus": "\/api\/3\/picklists\/72979f64-e8b9-4888-a965-957e0ec24818",
+                    "priorityWeight": 1,
+                    "escalatedtoincident": "\/api\/3\/picklists\/fa12313b-66af-4a2e-864e-a5f19241b734",
+                    "resolvedAutomatedly": false,
+                    "alertRemainingAckSLA": 0
+                },
+                "operation": "Overwrite",
+                "collection": "\/api\/3\/upsert\/alerts",
+                "__recommend": [],
+                "fieldOperation": [],
+                "step_variables": {
+                    "_temp": "{{vars.recordIRIs.extend(vars.steps.Create_Alerts | json_query('[].\"@id\"'))}}"
+                }
+            },
+            "status": null,
+            "top": "300",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/2597053c-e718-44b4-8394-4d40fe26d357",
+            "group": null,
+            "uuid": "5f3dda4a-2bb4-42c0-8792-7c46a43ce55e"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Create Incident",
+            "description": null,
+            "arguments": {
+                "resource": {
+                    "name": "{{vars.steps.Create_Alerts[0].name}}",
+                    "phase": "\/api\/3\/picklists\/bb740542-f699-11e7-8c3f-9a214cf093ae",
+                    "alerts": "{{vars.steps.Create_Alerts | json_query('[].\"@id\"')}}",
+                    "resSla": "\/api\/3\/picklists\/72979f64-e8b9-4888-a965-957e0ec24818",
+                    "source": "{{vars.steps.Create_Alerts[0].source}}",
+                    "status": "\/api\/3\/picklists\/bb73fe9e-f699-11e7-8c3f-9a214cf093ae",
+                    "category": "\/api\/3\/picklists\/703218fc-f69a-11e7-8c3f-9a214cf093ae",
+                    "severity": "{{\"Severity\" | picklist(vars.input.params.incidentSeverity, \"@id\")}}",
+                    "slaState": "\/api\/3\/picklists\/72979f64-e8b9-4888-a965-957e0ec24818",
+                    "sourceId": "{{vars.steps.Create_Alerts[0].sourceId}}",
+                    "__replace": "true",
+                    "slaPercentage": 0
+                },
+                "operation": "Overwrite",
+                "collection": "\/api\/3\/upsert\/incidents",
+                "__recommend": [],
+                "fieldOperation": [],
+                "step_variables": {
+                    "__temp": "{{vars.recordIRIs.append(vars.steps.Create_Incident['@id'])}}"
+                }
+            },
+            "status": null,
+            "top": "435",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/2597053c-e718-44b4-8394-4d40fe26d357",
+            "group": null,
+            "uuid": "14aa1e7a-cc8d-476a-9e83-29f705c291b8"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Start",
+            "description": null,
+            "arguments": {
+                "__triggerLimit": true,
+                "step_variables": {
+                    "input": {
+                        "params": []
+                    }
+                },
+                "triggerOnSource": true,
+                "triggerOnReplicate": false
+            },
+            "status": null,
+            "top": "30",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+            "group": null,
+            "uuid": "b9cfab0b-33a6-425c-8c00-a4ace3108358"
+        },
+        {
+            "@type": "WorkflowStep",
+            "name": "Step Output",
+            "description": null,
+            "arguments": {
+                "recordIRIList": "{{vars.recordIRIs}}"
+            },
+            "status": null,
+            "top": "570",
+            "left": "125",
+            "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+            "group": null,
+            "uuid": "24f06c8c-156d-416c-af83-83a69bc94303"
+        }
+    ],
+    "routes": [
+        {
+            "@type": "WorkflowRoute",
+            "name": "Configuration -> Create Alerts",
+            "targetStep": "\/api\/3\/workflow_steps\/5f3dda4a-2bb4-42c0-8792-7c46a43ce55e",
+            "sourceStep": "\/api\/3\/workflow_steps\/006d5cec-ece1-4c1a-be25-17aedcb0ce9b",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "d3c3ebe3-dfd2-4c3e-914e-2f6e27c2ec9f"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Create Alerts -> Create Incident",
+            "targetStep": "\/api\/3\/workflow_steps\/14aa1e7a-cc8d-476a-9e83-29f705c291b8",
+            "sourceStep": "\/api\/3\/workflow_steps\/5f3dda4a-2bb4-42c0-8792-7c46a43ce55e",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "eacf3f3e-9fc1-4a66-afe2-8221fe0fb628"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Create Incident -> Step Output",
+            "targetStep": "\/api\/3\/workflow_steps\/24f06c8c-156d-416c-af83-83a69bc94303",
+            "sourceStep": "\/api\/3\/workflow_steps\/14aa1e7a-cc8d-476a-9e83-29f705c291b8",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "29881d2e-2506-40d0-a1c0-888c948ae48d"
+        },
+        {
+            "@type": "WorkflowRoute",
+            "name": "Start -> Configuration",
+            "targetStep": "\/api\/3\/workflow_steps\/006d5cec-ece1-4c1a-be25-17aedcb0ce9b",
+            "sourceStep": "\/api\/3\/workflow_steps\/b9cfab0b-33a6-425c-8c00-a4ace3108358",
+            "label": null,
+            "isExecuted": false,
+            "group": null,
+            "uuid": "55db0879-ad4c-4f40-9149-bf193dfeec10"
+        }
+    ],
+    "groups": [],
+    "priority": "\/api\/3\/picklists\/2b563c61-ae2c-41c0-a85a-c9709585e3f2",
+    "uuid": "62b89160-8fa8-471b-bdc2-79cb7bf9ba1b",
+    "owners": [],
+    "isPrivate": false,
+    "deletedAt": null,
+    "recordTags": [
+        "Scenario",
+        "Subroutine"
+    ]
+}

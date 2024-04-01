@@ -1,0 +1,11 @@
+{
+    "@context": "\/api\/3\/contexts\/WorkflowCollection",
+    "@type": "WorkflowCollection",
+    "name": "02 - Use Case - Sankey Visualizer",
+    "description": null,
+    "visible": true,
+    "image": null,
+    "uuid": "c49f4fa7-f775-46f8-934c-d5ab8d2c1aa4",
+    "deletedAt": null,
+    "recordTags": []
+}

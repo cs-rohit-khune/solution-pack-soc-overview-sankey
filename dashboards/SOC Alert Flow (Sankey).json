@@ -1,0 +1,102 @@
+{
+    "@context": "\/api\/3\/contexts\/Dashboard",
+    "@type": "Dashboard",
+    "uuid": "a65f5c0c-8730-49d3-817a-4ddc8301eb7e",
+    "displayName": "SOC Alert Flow (Sankey)",
+    "type": "rows",
+    "templateType": "dashboard",
+    "roles": [
+        "\/api\/3\/roles\/c5ff8174-b3fa-41c5-b781-2b890b426a80",
+        "\/api\/3\/roles\/21d7a7c6-9d68-438f-b732-e8950c5f745b",
+        "\/api\/3\/roles\/a501c11e-15af-49a6-a3a4-88605f32f016",
+        "\/api\/3\/roles\/17562d60-b841-4ed7-912b-1ebaf063c8c9",
+        "\/api\/3\/roles\/09346f6b-c52e-49c0-9ea5-eb5df2b0fa88"
+    ],
+    "parentTemplateId": null,
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "socOverviewSankey-2.0.0",
+                                "config": {
+                                    "wid": "016bb3ba-54b2-45ef-851e-25b630064e20",
+                                    "moduleType": "Across Modules",
+                                    "entityTrackable": true,
+                                    "layers": [
+                                        {
+                                            "resource": "",
+                                            "sourceNodesField": "source",
+                                            "targetNodeField": "severity",
+                                            "targetNodeSubField": "",
+                                            "targetNodeType": "picklist",
+                                            "targetNodeSubType": "",
+                                            "label": "Sources"
+                                        },
+                                        {
+                                            "label": "Alerts",
+                                            "resource": "",
+                                            "sourceNodesField": "",
+                                            "targetNodeField": "type",
+                                            "targetNodeSubField": "",
+                                            "targetNodeType": "picklist",
+                                            "targetNodeSubType": "picklist"
+                                        },
+                                        {
+                                            "label": "Incidents",
+                                            "resource": "",
+                                            "sourceNodesField": "",
+                                            "targetNodeField": "incidents",
+                                            "targetNodeSubField": "severity",
+                                            "targetNodeType": "manyToMany",
+                                            "targetNodeSubType": "picklist"
+                                        }
+                                    ],
+                                    "title": "Alert Data",
+                                    "resource": "alerts",
+                                    "filters": {
+                                        "sort": [],
+                                        "limit": 30,
+                                        "logic": "AND",
+                                        "filters": []
+                                    },
+                                    "buttons": [
+                                        {
+                                            "id": "btn-6m",
+                                            "text": "BUTTON_LAST_6_MONTHS",
+                                            "active": true,
+                                            "type": "submit"
+                                        },
+                                        {
+                                            "id": "btn-3m",
+                                            "text": "BUTTON_LAST_3_MONTHS",
+                                            "active": false,
+                                            "type": "submit"
+                                        },
+                                        {
+                                            "id": "btn-30d",
+                                            "text": "BUTTON_LAST_30_DAYS",
+                                            "active": false,
+                                            "type": "submit"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "c7e609cc-79da-489e-a837-e62d8d7f4074",
+                "_collapsed": false
+            }
+        ],
+        "wid": "ec3b888e-7118-4710-a6c2-6f89044e3c3c",
+        "metadata": {
+            "customTemplateTitle": "Dashboard"
+        }
+    },
+    "filterArray": [],
+    "updateDate": null
+}
