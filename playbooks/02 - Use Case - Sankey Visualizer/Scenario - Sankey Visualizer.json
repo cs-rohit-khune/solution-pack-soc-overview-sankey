@@ -1,10 +1,10 @@
 {
     "@type": "Workflow",
     "triggerLimit": null,
-    "name": "Scenario - Sankey Visualizer",
+    "name": "Scenario - Sankey",
     "aliasName": null,
     "tag": null,
-    "description": "Create sample data to demonstrate how the 'SOC Overview Sankey' widget is used.",
+    "description": "Create sample data to demonstrate how the 'Sankey' widget is used.",
     "isActive": true,
     "debug": false,
     "singleRecordExecution": false,

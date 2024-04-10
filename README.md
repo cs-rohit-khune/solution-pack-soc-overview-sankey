@@ -1,13 +1,14 @@
 # Release Information
 
-* **Version**: 1.0.0
+* **Version**: 1.0.1
 * **Certified**: No
 * **Publisher**: Fortinet
 * **Compatible Version**: FortiSOAR v7.4.2 and later
+* [Release Notes](./release_notes.md)
 
 # Overview
 
-The **Sankey Visualizer** solution pack creates a dashboard using information from the *SOC Overview Sankey* Widget. 
+The **Sankey** solution pack creates a dashboard using information from the *Sankey* Widget. 
 
 At a glance, you can view the overall flow of data related to the various modules like alerts and escalated incidents from various sources. 
 

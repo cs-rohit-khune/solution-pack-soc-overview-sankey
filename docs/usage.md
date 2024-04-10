@@ -9,7 +9,7 @@
 
 ## Customize
 
-- Refer to the [SOC Overview Sankey Widget](https://github.com/fortinet-fortisoar/widget-soc-overview-sankey/blob/develop/README.md) documentation to change the parameters according to your needs.
+- Refer to the [Sankey Widget](https://github.com/fortinet-fortisoar/widget-soc-overview-sankey/blob/develop/README.md) documentation to change the parameters according to your needs.
 
 | [Installation](./setup.md#installation) | [Configuration](./setup.md#configuration) | [Contents](./contents.md) |
 |-----------------------------------------|-------------------------------------------|---------------------------|

@@ -1,7 +1,7 @@
 {
     "@type": "Workflow",
     "triggerLimit": null,
-    "name": "Scenario - Sankey Visualizer - Create Demo Records",
+    "name": "Scenario - Sankey - Create Demo Records",
     "aliasName": null,
     "tag": null,
     "description": "Generate sample alert and incident records for demonstration purposes",
