@@ -23,7 +23,7 @@
                                 "type": "socOverviewSankey-2.0.0",
                                 "config": {
                                     "wid": "016bb3ba-54b2-45ef-851e-25b630064e20",
-                                    "moduleType": "Across Modules",
+                                    "moduleType": "Single Module",
                                     "entityTrackable": true,
                                     "layers": [
                                         {
@@ -81,7 +81,24 @@
                                             "active": false,
                                             "type": "submit"
                                         }
-                                    ]
+                                    ],
+                                    "entityName": "alerts",
+                                    "customModule": "keys",
+                                    "query": {
+                                        "sort": [],
+                                        "limit": 30,
+                                        "logic": "AND",
+                                        "filters": [
+                                            {
+                                                "field": "key",
+                                                "operator": "eq",
+                                                "_operator": "eq",
+                                                "value": "widget_sankey_sample_data",
+                                                "type": "primitive"
+                                            }
+                                        ]
+                                    },
+                                    "customModuleField": "jSONValue"
                                 }
                             }
                         ],

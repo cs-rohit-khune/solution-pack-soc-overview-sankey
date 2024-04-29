@@ -49,6 +49,11 @@
         ],
         "recordSets": [
             {
+                "name": "Key Store",
+                "apiName": "keys",
+                "count": 1
+            },
+            {
                 "name": "Scenario",
                 "apiName": "scenario",
                 "count": 1

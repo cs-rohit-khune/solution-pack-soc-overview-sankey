@@ -1,0 +1,191 @@
+[
+    {
+        "@type": "Key",
+        "key": "widget_sankey_sample_data",
+        "value": "Sankey Sample Data",
+        "jSONValue": {
+            "data_1": [
+                {
+                    "total": 1,
+                    "series_0": "Phishing",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "Malware",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "DDoS",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "MitM",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "SQL Injection",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "XSS Attacks",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "Ransomware",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "Insider Threats",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "Zero-Day Exploits",
+                    "series_1": "Low",
+                    "color_series_1": "#28B35C"
+                },
+                {
+                    "total": 1,
+                    "series_0": "Social Engineering",
+                    "series_1": "Critical",
+                    "color_series_1": "#e31b1d"
+                },
+                {
+                    "total": 1,
+                    "series_0": "Advanced Persistent Threats (APTs)",
+                    "series_1": "Critical",
+                    "color_series_1": "#e31b1d"
+                },
+                {
+                    "total": 1,
+                    "series_0": "BFA",
+                    "series_1": "High",
+                    "color_series_1": "#DE7A13"
+                },
+                {
+                    "total": 1,
+                    "series_0": "DNS Spoofing",
+                    "series_1": "High",
+                    "color_series_1": "#DE7A13"
+                },
+                {
+                    "total": 1,
+                    "series_0": "Impossible Traveller",
+                    "series_1": "Minimal",
+                    "color_series_1": "#157DD9"
+                }
+            ],
+            "data_2": [
+                {
+                    "total": 1,
+                    "series_1": "Critical",
+                    "series_2": "Zero-Day Exploits",
+                    "color_series_1": "#e31b1d"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Critical",
+                    "series_2": "Advanced Persistent Threats (APTs)",
+                    "color_series_1": "#e31b1d"
+                },
+                {
+                    "total": 1,
+                    "series_1": "High",
+                    "series_2": "BFA",
+                    "color_series_1": "#DE7A13"
+                },
+                {
+                    "total": 1,
+                    "series_1": "High",
+                    "series_2": "DNS Spoofing",
+                    "color_series_1": "#DE7A13"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Low",
+                    "series_2": "DDoS",
+                    "color_series_1": "#28B35C"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Medium",
+                    "series_2": "Phishing",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Medium",
+                    "series_2": "Malware",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Medium",
+                    "series_2": "Ransomware",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Medium",
+                    "series_2": "Insider Threats",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Medium",
+                    "series_2": "XSS Attacks",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Medium",
+                    "series_2": "MitM",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Medium",
+                    "series_2": "SQL Injection",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Minimal",
+                    "series_2": "Impossible Traveller",
+                    "color_series_1": "#157DD9"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Minimal",
+                    "series_2": "Social Engineering",
+                    "color_series_1": "#157DD9"
+                }
+            ]
+        },
+        "notes": null,
+        "uuid": "973b67d9-8d2e-481d-b00a-b435971d3749",
+        "createUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
+        "createDate": 1714037158.950275,
+        "modifyUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
+        "modifyDate": 1714042538.077165,
+        "tenant": "\/api\/3\/tenants\/b3a700f7-00be-4ef9-90c6-3c8fe6e1be63",
+        "conflict": false,
+        "tenantRecordId": 6,
+        "recordTags": []
+    }
+]
