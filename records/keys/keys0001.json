@@ -2,7 +2,7 @@
     {
         "@type": "Key",
         "key": "widget_sankey_sample_data",
-        "value": "Sankey Sample Data",
+        "value": "",
         "jSONValue": {
             "data_1": [
                 {
@@ -93,9 +93,9 @@
             "data_2": [
                 {
                     "total": 1,
-                    "series_1": "Critical",
+                    "series_1": "Low",
                     "series_2": "Zero-Day Exploits",
-                    "color_series_1": "#e31b1d"
+                    "color_series_1": "#28B35C"
                 },
                 {
                     "total": 1,
@@ -117,9 +117,9 @@
                 },
                 {
                     "total": 1,
-                    "series_1": "Low",
+                    "series_1": "Medium",
                     "series_2": "DDoS",
-                    "color_series_1": "#28B35C"
+                    "color_series_1": "#D2AC1A"
                 },
                 {
                     "total": 1,
@@ -171,18 +171,18 @@
                 },
                 {
                     "total": 1,
-                    "series_1": "Minimal",
+                    "series_1": "Critical",
                     "series_2": "Social Engineering",
-                    "color_series_1": "#157DD9"
+                    "color_series_1": "#e31b1d"
                 }
             ]
         },
-        "notes": null,
+        "notes": "Sankey Widget Sample Data",
         "uuid": "973b67d9-8d2e-481d-b00a-b435971d3749",
         "createUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
         "createDate": 1714037158.950275,
         "modifyUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
-        "modifyDate": 1714042538.077165,
+        "modifyDate": 1714384593.989091,
         "tenant": "\/api\/3\/tenants\/b3a700f7-00be-4ef9-90c6-3c8fe6e1be63",
         "conflict": false,
         "tenantRecordId": 6,

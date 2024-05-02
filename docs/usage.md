@@ -5,7 +5,9 @@
 
 - Navigate to the newly created dashboard **SOC Alert Flow (Sankey)**.
 
-- The Dashboard provides an overall view of flow of data related to various modules like alerts and escalated incidents from various sources.
+- The Dashboard provides an overall view of data flow related to various modules like alerts and escalated incidents from multiple sources.
+  
+  **Note:** This dashboard is configured by default and displays the Sankey chart using the sample data in the 'widget_sankey_sample_data' of the "Key Store" module. 
 
 ## Customize
 
