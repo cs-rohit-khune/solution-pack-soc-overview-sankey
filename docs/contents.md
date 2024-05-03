@@ -5,21 +5,21 @@
 
 ## Widget
 
-| Widget Name    | Description                                                      |
-|:---------------|:-----------------------------------------------------------------|
+| Name   | Description                                                 |
+|:-------|:------------------------------------------------------------|
 | Sankey | Visualize flow between nodes in a directed acyclic network. |
 
 ## Dashboard
 
-| Dashboard Name           | Description                                           |
-|:-------------------------|:------------------------------------------------------|
+| Name                    | Description                         |
+|:------------------------|:------------------------------------|
 | SOC Alert Flow (Sankey) | The Dashboard has the Sankey widget |
 
 ## Record Set
 
-| Scenario            | Description                                                                                               |
-|:--------------------|:----------------------------------------------------------------------------------------------------------|
-| Sankey | A simulation that generates demo alerts and incidents for various sources such as FortiSIEM, FortiNDR etc |
+| Scenario | Description                                                                                                    |
+|:---------|:---------------------------------------------------------------------------------------------------------------|
+| Sankey   | A simulation that generates example alerts and incidents on behalf of various sources such as FortiSIEM, FortiNDR, etc. |
 
 | [Installation](./setup.md#installation) | [Configuration](./setup.md#configuration) | [Usage](./usage.md) |
 |---------------------------------------- |------------------------------------------ |-------------------- |
