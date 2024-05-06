@@ -7,7 +7,43 @@
             "data_1": [
                 {
                     "total": 1,
-                    "series_0": "Phishing",
+                    "series_0": "Beaconing",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "Denial of Service",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "Command and Control",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "Compliance",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "Brute Force Attempts",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "Data Exfiltration",
+                    "series_1": "Medium",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_0": "Lateral Movement",
                     "series_1": "Medium",
                     "color_series_1": "#D2AC1A"
                 },
@@ -19,73 +55,37 @@
                 },
                 {
                     "total": 1,
-                    "series_0": "DDoS",
-                    "series_1": "Medium",
-                    "color_series_1": "#D2AC1A"
-                },
-                {
-                    "total": 1,
-                    "series_0": "MitM",
-                    "series_1": "Medium",
-                    "color_series_1": "#D2AC1A"
-                },
-                {
-                    "total": 1,
-                    "series_0": "SQL Injection",
-                    "series_1": "Medium",
-                    "color_series_1": "#D2AC1A"
-                },
-                {
-                    "total": 1,
-                    "series_0": "XSS Attacks",
-                    "series_1": "Medium",
-                    "color_series_1": "#D2AC1A"
-                },
-                {
-                    "total": 1,
-                    "series_0": "Ransomware",
-                    "series_1": "Medium",
-                    "color_series_1": "#D2AC1A"
-                },
-                {
-                    "total": 1,
-                    "series_0": "Insider Threats",
-                    "series_1": "Medium",
-                    "color_series_1": "#D2AC1A"
-                },
-                {
-                    "total": 1,
-                    "series_0": "Zero-Day Exploits",
+                    "series_0": "Phishing",
                     "series_1": "Low",
                     "color_series_1": "#28B35C"
                 },
                 {
                     "total": 1,
-                    "series_0": "Social Engineering",
+                    "series_0": "Ransomware",
                     "series_1": "Critical",
                     "color_series_1": "#e31b1d"
                 },
                 {
                     "total": 1,
-                    "series_0": "Advanced Persistent Threats (APTs)",
+                    "series_0": "Reconnaissance",
                     "series_1": "Critical",
                     "color_series_1": "#e31b1d"
                 },
                 {
                     "total": 1,
-                    "series_0": "BFA",
+                    "series_0": "Sunburst",
                     "series_1": "High",
                     "color_series_1": "#DE7A13"
                 },
                 {
                     "total": 1,
-                    "series_0": "DNS Spoofing",
+                    "series_0": "Concurrent Login",
                     "series_1": "High",
                     "color_series_1": "#DE7A13"
                 },
                 {
                     "total": 1,
-                    "series_0": "Impossible Traveller",
+                    "series_0": "Suspicious Email",
                     "series_1": "Minimal",
                     "color_series_1": "#157DD9"
                 }
@@ -93,38 +93,74 @@
             "data_2": [
                 {
                     "total": 1,
-                    "series_1": "Low",
-                    "series_2": "Zero-Day Exploits",
-                    "color_series_1": "#28B35C"
+                    "series_1": "Critical",
+                    "series_2": "Ransomware",
+                    "color_series_1": "#e31b1d"
                 },
                 {
                     "total": 1,
                     "series_1": "Critical",
-                    "series_2": "Advanced Persistent Threats (APTs)",
+                    "series_2": "Reconnaissance",
                     "color_series_1": "#e31b1d"
                 },
                 {
                     "total": 1,
                     "series_1": "High",
-                    "series_2": "BFA",
+                    "series_2": "Sunburst",
                     "color_series_1": "#DE7A13"
                 },
                 {
                     "total": 1,
                     "series_1": "High",
-                    "series_2": "DNS Spoofing",
+                    "series_2": "Concurrent Login",
                     "color_series_1": "#DE7A13"
                 },
                 {
                     "total": 1,
+                    "series_1": "Low",
+                    "series_2": "Phishing",
+                    "color_series_1": "#28B35C"
+                },
+                {
+                    "total": 1,
                     "series_1": "Medium",
-                    "series_2": "DDoS",
+                    "series_2": "Beaconing",
                     "color_series_1": "#D2AC1A"
                 },
                 {
                     "total": 1,
                     "series_1": "Medium",
-                    "series_2": "Phishing",
+                    "series_2": "Denial of Service",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Medium",
+                    "series_2": "Command and Control",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Medium",
+                    "series_2": "Compliance",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Medium",
+                    "series_2": "Brute Force Attempts",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Medium",
+                    "series_2": "Data Exfiltration",
+                    "color_series_1": "#D2AC1A"
+                },
+                {
+                    "total": 1,
+                    "series_1": "Medium",
+                    "series_2": "Lateral Movement",
                     "color_series_1": "#D2AC1A"
                 },
                 {
@@ -135,45 +171,9 @@
                 },
                 {
                     "total": 1,
-                    "series_1": "Medium",
-                    "series_2": "Ransomware",
-                    "color_series_1": "#D2AC1A"
-                },
-                {
-                    "total": 1,
-                    "series_1": "Medium",
-                    "series_2": "Insider Threats",
-                    "color_series_1": "#D2AC1A"
-                },
-                {
-                    "total": 1,
-                    "series_1": "Medium",
-                    "series_2": "XSS Attacks",
-                    "color_series_1": "#D2AC1A"
-                },
-                {
-                    "total": 1,
-                    "series_1": "Medium",
-                    "series_2": "MitM",
-                    "color_series_1": "#D2AC1A"
-                },
-                {
-                    "total": 1,
-                    "series_1": "Medium",
-                    "series_2": "SQL Injection",
-                    "color_series_1": "#D2AC1A"
-                },
-                {
-                    "total": 1,
                     "series_1": "Minimal",
-                    "series_2": "Impossible Traveller",
+                    "series_2": "Suspicious Email",
                     "color_series_1": "#157DD9"
-                },
-                {
-                    "total": 1,
-                    "series_1": "Critical",
-                    "series_2": "Social Engineering",
-                    "color_series_1": "#e31b1d"
                 }
             ]
         },

@@ -20,48 +20,69 @@
                     {
                         "widgets": [
                             {
-                                "type": "socOverviewSankey-2.0.0",
+                                "type": "socOverviewSankey-2.1.0",
                                 "config": {
-                                    "wid": "016bb3ba-54b2-45ef-851e-25b630064e20",
+                                    "wid": "81688806-a17c-4baa-ab4f-c0e137c8bbc8",
                                     "moduleType": "Single Module",
                                     "entityTrackable": true,
                                     "layers": [
                                         {
-                                            "resource": "",
-                                            "sourceNodesField": "source",
-                                            "targetNodeField": "severity",
-                                            "targetNodeSubField": "",
+                                            "id": null,
+                                            "label": "Sources",
+                                            "sourceNode": "source",
+                                            "targetNode": "severity",
                                             "targetNodeType": "picklist",
-                                            "targetNodeSubType": "",
-                                            "label": "Sources"
+                                            "targetNodeModule": "application",
+                                            "targetNodeField": null,
+                                            "targetNodeFieldType": null,
+                                            "sourceNodeModule": "alerts",
+                                            "targetNodeSubField": null,
+                                            "sourceNodeType": "text"
                                         },
                                         {
+                                            "id": null,
                                             "label": "Alerts",
-                                            "resource": "",
-                                            "sourceNodesField": "",
-                                            "targetNodeField": "type",
-                                            "targetNodeSubField": "",
+                                            "sourceNode": "severity",
+                                            "targetNode": "type",
                                             "targetNodeType": "picklist",
-                                            "targetNodeSubType": "picklist"
+                                            "targetNodeModule": "application",
+                                            "targetNodeField": null,
+                                            "targetNodeFieldType": null,
+                                            "sourceNodeType": "picklist",
+                                            "sourceNodeModule": "alerts",
+                                            "targetNodeSubField": null
                                         },
                                         {
+                                            "id": null,
                                             "label": "Incidents",
-                                            "resource": "",
-                                            "sourceNodesField": "",
-                                            "targetNodeField": "incidents",
-                                            "targetNodeSubField": "severity",
+                                            "sourceNode": "type",
+                                            "targetNode": "incidents",
                                             "targetNodeType": "manyToMany",
-                                            "targetNodeSubType": "picklist"
+                                            "targetNodeModule": "incidents",
+                                            "targetNodeField": "severity",
+                                            "targetNodeFieldType": "picklist",
+                                            "sourceNodeType": "picklist",
+                                            "sourceNodeModule": "alerts",
+                                            "targetNodeSubField": null
                                         }
                                     ],
-                                    "title": "Alert Data",
                                     "resource": "alerts",
-                                    "filters": {
+                                    "query": {
                                         "sort": [],
                                         "limit": 30,
                                         "logic": "AND",
-                                        "filters": []
+                                        "filters": [
+                                            {
+                                                "field": "key",
+                                                "operator": "eq",
+                                                "_operator": "eq",
+                                                "value": "widget_sankey_sample_data",
+                                                "type": "primitive"
+                                            }
+                                        ]
                                     },
+                                    "recordSize": 30,
+                                    "title": "Alert Data",
                                     "buttons": [
                                         {
                                             "id": "btn-6m",
@@ -82,22 +103,7 @@
                                             "type": "submit"
                                         }
                                     ],
-                                    "entityName": "alerts",
                                     "customModule": "keys",
-                                    "query": {
-                                        "sort": [],
-                                        "limit": 30,
-                                        "logic": "AND",
-                                        "filters": [
-                                            {
-                                                "field": "key",
-                                                "operator": "eq",
-                                                "_operator": "eq",
-                                                "value": "widget_sankey_sample_data",
-                                                "type": "primitive"
-                                            }
-                                        ]
-                                    },
                                     "customModuleField": "jSONValue"
                                 }
                             }
